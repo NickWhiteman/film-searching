@@ -3,7 +3,7 @@
         <h1 class="app__header">FilmSearching ...</h1>
         <div class="app__search-wrapper">
             <input type="text" [(ngModel)]="inputValue" placeholder="Enter film">
-            <button (onclick)="getFilms()">Search</button>
+            <button (click)="getFilms()">Search</button>
         </div>
     </div>
     <div *ngIf="filmInfo" class="app__search-result">
@@ -13,8 +13,7 @@
                 <span>{{film.year}}</span>
             </div>
             <div class="search-result__filmInfo">
-                <span>{{film.posterUrlPreview}}</span>
-                <span>{{film.description}}</span>
+                <img src={{film.posterUrlPreview}}>
             </div>
         </div>
     </div>

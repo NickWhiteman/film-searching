@@ -3,7 +3,9 @@ $buttonColor: rgb(30, 133, 110);
 
 .app {
     height: 900px;
-    max-width: 1900px;
+    min-height: 850px;
+    max-height: 300000px;
+    max-width: 2200px;
     background-color: $appBackgroundColor;
 
     input {
@@ -26,7 +28,7 @@ $buttonColor: rgb(30, 133, 110);
         text-align: left;
         padding-top: 100px;
         padding-bottom: 20px;
-    }
+    };
 
     button {
         margin-left: 10px;
@@ -36,12 +38,35 @@ $buttonColor: rgb(30, 133, 110);
         border-radius: 5px;
         color: white;
         background-color:$buttonColor;
-    }
+    };
+
+    img {
+        width: 85%;
+        border-radius: 10px;
+    };
 
     .app__search-container {
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
+    };
+
+    .app__search-result {
+        margin-top: 100px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    };
+
+    .app__film {
+        display: flex;
+        flex-direction: column;
+
+        height: 560px;
+        width: 380px;
+        color: white;
+        background-color: rgb(18, 22, 22);
+        border-radius: 10px;
+        border: 3px solid $buttonColor;
     };
 }

@@ -11,14 +11,14 @@ export class AppComponent {
   inputValue: string = '';
   filmInfo: FilmType[] = [];
 
-  constructor(private _filmService: ConfigService) { };
+  constructor(private _ConfigService: ConfigService) { };
 
   getFilms(): void {
-    this._filmService.getSearchByFilmName(encodeURI(this.inputValue))
+    console.log(this.inputValue);
+    this._ConfigService.getSearchByFilmName(encodeURI(this.inputValue))
       .subscribe((films) => {
         console.log(films)
-        this.filmInfo = films;
+        this.filmInfo = films.films;
       });
-    console.log(this.inputValue);
   };
 };

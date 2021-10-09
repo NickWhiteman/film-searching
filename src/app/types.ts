@@ -21,3 +21,9 @@ export type FilmType = {
   posterUrl: string;
   posterUrlPreview: string;
 };
+
+export type ResponseFilmsTypes = {
+  keyword: string
+  pagesCount: number
+  films: FilmType[]
+}
