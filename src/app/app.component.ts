@@ -9,12 +9,16 @@ import { FilmType } from './types';
 })
 export class AppComponent {
   inputValue: string = '';
-  filmInfo: FilmType[] | null = null;
+  filmInfo: FilmType[] = [];
 
   constructor(private _filmService: ConfigService) { };
 
-  getFilms() {
-    this._filmService.getSearchByFilmName(encodeURI(this.inputValue)).subscribe(film => console.log(film));
+  getFilms(): void {
+    this._filmService.getSearchByFilmName(encodeURI(this.inputValue))
+      .subscribe((films) => {
+        console.log(films)
+        this.filmInfo = films;
+      });
     console.log(this.inputValue);
   };
 };

@@ -16,6 +16,6 @@ export class ConfigService {
   };
 
   getSearchByFilmName(filmName: string): Observable<FilmType[]> {
-    return this.http.get<FilmType[]>(`${this._baseUrl}/api/v2.1/films/search-by-keyword${filmName}`, this._options);
+    return this.http.get<FilmType[]>(`${this._baseUrl}/api/v2.1/films/search-by-keyword?keyword=${filmName}`, this._options);
   };
 } 

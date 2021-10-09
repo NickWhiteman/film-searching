@@ -1,29 +1,23 @@
 export type FilmType = {
-  keyword: string;
-  pagesCount: number;
-  films: [
+  filmId: number;
+  nameRu: string;
+  nameEn: string;
+  type: string;
+  year: string;
+  description: string;
+  filmLength: string;
+  countries: [
     {
-      filmId: number;
-      nameRu: string;
-      nameEn: string;
-      type: string;
-      year: string;
-      description: string;
-      filmLength: string;
-      countries: [
-        {
-          country: string;
-        }
-      ];
-      genres: [
-        {
-          genre: string;
-        }
-      ];
-      rating: number;
-      ratingVoteCount: number;
-      posterUrl: string;
-      posterUrlPreview: string;
+      country: string;
     }
   ];
+  genres: [
+    {
+      genre: string;
+    }
+  ];
+  rating: number;
+  ratingVoteCount: number;
+  posterUrl: string;
+  posterUrlPreview: string;
 };
