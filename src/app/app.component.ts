@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { ConfigService } from './config/config.service';
+import { FilmType } from './types';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +8,13 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'film-searching';
-}
+  inputValue: string = '';
+  filmInfo: FilmType[] | null = null;
+
+  constructor(private _filmService: ConfigService) { };
+
+  getFilms() {
+    this._filmService.getSearchByFilmName(encodeURI(this.inputValue)).subscribe(film => console.log(film));
+    console.log(this.inputValue);
+  };
+};

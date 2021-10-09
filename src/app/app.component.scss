@@ -1,0 +1,47 @@
+$appBackgroundColor: rgb(38, 37, 41);
+$buttonColor: rgb(30, 133, 110);
+
+.app {
+    height: 900px;
+    max-width: 1900px;
+    background-color: $appBackgroundColor;
+
+    input {
+        padding: 0 5px;
+        height:40px;
+        width: 600px;
+        border-radius: 5px;
+    };
+
+    input:focus {
+        padding: 0 5px;
+        height:40px;
+        width: 600px;
+        outline: 5px solid $buttonColor;
+    };
+
+    .app__header {
+        position: relative;
+        color: $buttonColor;
+        text-align: left;
+        padding-top: 100px;
+        padding-bottom: 20px;
+    }
+
+    button {
+        margin-left: 10px;
+        height:40px;
+        width: 100px;
+        border: none;
+        border-radius: 5px;
+        color: white;
+        background-color:$buttonColor;
+    }
+
+    .app__search-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    };
+}
