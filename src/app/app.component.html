@@ -2,7 +2,7 @@
     <div class="app__search-container">
         <h1 class="app__header">FilmSearching ...</h1>
         <div class="app__search-wrapper">
-            <input type="text" [(ngModel)]="inputValue" placeholder="Enter film">
+            <input type="text" (keyup)="getFilmOnEnter($event)" [(ngModel)]="inputValue" placeholder="Enter film">
             <button (click)="getFilms()">Search</button>
         </div>
     </div>

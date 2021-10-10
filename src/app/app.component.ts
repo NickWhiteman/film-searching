@@ -21,4 +21,10 @@ export class AppComponent {
         this.filmInfo = films.films;
       });
   };
+
+  getFilmOnEnter(event: KeyboardEvent) {
+    if (event.keyCode === 13)
+      this.getFilms();
+  }
+
 };
