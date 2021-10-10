@@ -1,7 +1,7 @@
 import { HttpClient } from "@angular/common/http";
 import { Injectable } from "@angular/core";
 import { Observable } from "rxjs";
-import { FilmType } from "../types";
+import { ResponseFilmsTypes } from "../types";
 
 @Injectable({
   providedIn: 'root'
@@ -15,7 +15,9 @@ export class ConfigService {
   constructor(private http: HttpClient) {
   };
 
-  getSearchByFilmName(filmName: string): Observable<FilmType[]> {
-    return this.http.get<FilmType[]>(`${this._baseUrl}/api/v2.1/films/search-by-keyword?keyword=${filmName}`, this._options);
+  getSearchByFilmName(filmName: string): Observable<ResponseFilmsTypes> {
+    return this.http.get<ResponseFilmsTypes>(
+      `${this._baseUrl}/api/v2.1/films/search-by-keyword?keyword=${filmName}`,
+      this._options);
   };
 } 

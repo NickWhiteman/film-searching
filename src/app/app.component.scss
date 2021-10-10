@@ -2,8 +2,9 @@ $appBackgroundColor: rgb(38, 37, 41);
 $buttonColor: rgb(30, 133, 110);
 
 .app {
-    height: 900px;
-    max-width: 1900px;
+    height: auto;
+    min-height: 1200px;
+    max-width: 2200px;
     background-color: $appBackgroundColor;
 
     input {
@@ -14,9 +15,6 @@ $buttonColor: rgb(30, 133, 110);
     };
 
     input:focus {
-        padding: 0 5px;
-        height:40px;
-        width: 600px;
         outline: 5px solid $buttonColor;
     };
 
@@ -26,7 +24,7 @@ $buttonColor: rgb(30, 133, 110);
         text-align: left;
         padding-top: 100px;
         padding-bottom: 20px;
-    }
+    };
 
     button {
         margin-left: 10px;
@@ -36,12 +34,54 @@ $buttonColor: rgb(30, 133, 110);
         border-radius: 5px;
         color: white;
         background-color:$buttonColor;
-    }
+    };
+
+    img {
+        position: relative;
+        width: 85%;
+        border-radius: 10px;
+    };
 
     .app__search-container {
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        margin-bottom: 40px;
+    };
+
+    .app__search-result {
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        flex-direction: row;
+        flex-wrap: wrap;
+        width: 900px;
+        margin: 0 auto;
+        
+        .search-result__headerFilm {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+            margin-bottom: 20px;
+        };
+
+        .search-result__filmInfo {
+            display: flex;
+            justify-content: center;
+        }
+    };
+
+
+    .app__film {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 15px;
+        height: 560px;
+        width: 380px;
+        color: white;
+        background-color: rgb(18, 22, 22);
+        border-radius: 10px;
+        border: 3px solid $buttonColor;
     };
 }
